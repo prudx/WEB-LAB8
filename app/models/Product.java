@@ -75,4 +75,10 @@ public class Product extends Model{
         public void setPrice(double price) {
                 this.price = price;
         }
+        
+        public static Finder<Long, Product> find = new Finder<Long, Product>(Product.class);
+        
+        public static List<Product> findAll() {
+            return Product.find.all();
+        }
 }
